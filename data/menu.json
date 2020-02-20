@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Galerie",
+    "link": "galerie"
+  },
+  {
+    "title": "Tarifs",
+    "link": "#certifications"
+  },
+  {
+    "title": "technologies",
+    "link": "#technologies"
+  },
+  {
+    "title": "Experience",
+    "link": "#experience"
+  },
+  {
+    "title": "About Me",
+    "link": "#about-me"
+  }
+]
