@@ -51,7 +51,7 @@ const IndexPage = ({ data }) => (
       <HeroText />
       <Social edges={data.allSocialJson.edges} />
     </Hero>
-    <Section id="A propos">
+    <Section id="A propos" dark>
       <h1>A propos</h1>
       <Flex alignItems="center" flexDirection="column">
         <Box px={2} width={[1, 1 / 2]}>

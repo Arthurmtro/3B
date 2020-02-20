@@ -6,6 +6,7 @@ const Container = styled.div`
   display: flex;
   position: relative;
   align-items: center;
+  position: relative;
 `;
 
 const Overlay = styled.div`
@@ -24,19 +25,18 @@ const Overlay = styled.div`
 `;
 
 const BgImage = styled(Image)`
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: -10;
-  height: ${(props) => props.height || '100vh'};
+  z-index: -1;
+  height: 100vh; // or whatever
 
-  // Adjust image positioning (if image covers area with defined height) and add font-family for polyfill
+   // Adjust image positioning (if image covers area with defined height) and add font-family for polyfill
   & > img {
-    object-fit: ${(props) => props.fit || 'cover'} !important;
-    object-position: ${(props) => props.position || '25% 20%'} !important;
-    font-family: 'object-fit: ${(props) => props.fit || 'cover'} !important; object-position: ${(
-  props,
-) => props.position || '50% 50%'} !important;'
+    object-fit: cover !important; // or whatever
+    object-position: 0% 0% !important; // or whatever
+    font-family: 'object-fit: cover !important; object-position: 0% 0% !important;' // needed for IE9+ polyfill
   }
 `;
 

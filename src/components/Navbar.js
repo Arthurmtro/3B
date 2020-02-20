@@ -13,7 +13,7 @@ const Base = styled.div`
   line-height: 62px;
   width: 100vw;
   z-index: 10000;
-  background: linear-gradient(#302921 50%, #00000000);
+  background: linear-gradient(#0e0a07 50%, #00000000);
   position: fixed;
   & ul {
     width: 100%;
