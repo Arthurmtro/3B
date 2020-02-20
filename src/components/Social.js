@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Envelope as MailIcon } from 'styled-icons/fa-solid/Envelope.cjs';
-import { LinkedinIn as LinkedinIcon } from 'styled-icons/fa-brands/LinkedinIn.cjs';
 import { Facebook as FacebookIcon } from 'styled-icons/fa-brands/Facebook';
 import scrollToElement from 'scroll-to-element';
 import Link from './Link';
@@ -24,15 +23,11 @@ const IconWrapper = styled.div`
 
 function Social(props) {
   const { edges } = props;
-  const linkedin = edges.find((o) => o.node.type === 'linkedin');
   const facebook = edges.find((o) => o.node.type === 'facebook');
   const mail = edges.find((o) => o.node.type === 'mail');
 
   return (
     <IconWrapper>
-      <Link aria-label={linkedin.node.type} to={linkedin.node.url}>
-        <LinkedinIcon />
-      </Link>
       <Link aria-label={facebook.node.type} to={facebook.node.url}>
         <FacebookIcon />
       </Link>

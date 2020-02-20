@@ -2,17 +2,19 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import styled, { css } from 'styled-components';
 import { Flex, Box } from 'grid-styled';
+/*
 import Experience from '../components/Experience';
 import Certifications from '../components/Certifications';
 import Technologies from '../components/Technologies';
 import Educations from '../components/Educations';
 import ContactForm from '../components/ContactForm';
+*/
 import Hero from '../components/Hero';
 import Layout from '../components/Layout';
 import HeroText from '../components/HeroText';
 import Social from '../components/Social';
 
-import media from '../utils/style';
+/* import media from '../utils/style'; */
 
 const Section = styled.div`
   text-align: center;
@@ -33,6 +35,7 @@ const Section = styled.div`
     `}
 `;
 
+/*
 const SectionTitle = styled.h2`
   font-size: 2em;
   margin: 0.67em 0;
@@ -40,6 +43,7 @@ const SectionTitle = styled.h2`
     font-size:1.5em;
   `}
 `;
+ */
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -47,8 +51,8 @@ const IndexPage = ({ data }) => (
       <HeroText />
       <Social edges={data.allSocialJson.edges} />
     </Hero>
-    <Section id="about-me">
-      <h1>About Me</h1>
+    <Section id="A propos">
+      <h1>A propos</h1>
       <Flex alignItems="center" flexDirection="column">
         <Box px={2} width={[1, 1 / 2]}>
           <p>
@@ -59,7 +63,8 @@ const IndexPage = ({ data }) => (
         </Box>
       </Flex>
     </Section>
-    <Section id="experience" dark>
+    {/*
+      <Section id="experience" dark>
       <SectionTitle>My Experience</SectionTitle>
       <Experience edges={data.allExperienceJson.edges} />
     </Section>
@@ -83,6 +88,7 @@ const IndexPage = ({ data }) => (
         </Box>
       </Flex>
     </Section>
+    */}
   </Layout>
 );
 

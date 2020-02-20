@@ -20,7 +20,7 @@ const StyledTypist = styled(Typist)`
   `}
 `;
 
-function HeroText(props) {
+const HeroText = (props) => {
   const { text } = props;
   if (text) {
     return (
@@ -56,9 +56,9 @@ function HeroText(props) {
       <strong key={8}> Ne cherchez plus,</strong>
       <Typist.Delay ms={1500} />
       {' '}
-Nous somme la .
+Nous somme la
     </StyledTypist>
   );
-}
+};
 
 export default HeroText;

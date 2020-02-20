@@ -40,7 +40,7 @@ const BgImage = styled(Image)`
   }
 `;
 
-function Hero(props) {
+const Hero = (props) => {
   const { children, fluid } = props;
   return (
     <Container>
@@ -48,6 +48,6 @@ function Hero(props) {
       <Overlay>{children}</Overlay>
     </Container>
   );
-}
+};
 
 export default Hero;
