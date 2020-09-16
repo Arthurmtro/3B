@@ -1,4 +1,4 @@
-import React from "react"; // eslint-disable-line no-unused-vars
+import React from "react";
 import Helmet from "react-helmet";
 import styled, { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
