@@ -1,5 +1,4 @@
 import React from "react";
-import Helmet from "react-helmet";
 import styled, { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 import styledNormalize from "styled-normalize";
@@ -70,13 +69,6 @@ const FooterText = styled.div`
 const Layout = ({ children }) => (
   <Body>
     <GlobalStyle />
-    <Helmet title="3b">
-      <html lang="fr" />
-      <meta
-        name="description"
-        content="I am a serverless and modern application consultant and continously find ways to help my clients unlock value by switching from old school development methodology to a modern approach!"
-      />
-    </Helmet>
     <Navbar />
     {children}
     <Footer>
