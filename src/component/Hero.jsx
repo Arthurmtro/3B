@@ -1,6 +1,6 @@
 import React from "react";
 
-import Image from "../assets/forest2.jpg";
+import Image from "../assets/wood.jpg";
 import styled from "styled-components";
 
 const Container = styled.div`

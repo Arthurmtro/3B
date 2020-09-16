@@ -14,7 +14,7 @@ const StyledTypist = styled(Typist)`
   text-transform: uppercase;
   font-family: "Raleway";
   ${media.xs`
-    font-size:26px;
+    font-size:28px;
     line-height: 44px;
     letter-spacing: 8px;
   `}
@@ -32,7 +32,7 @@ const HeroText = (props) => {
     );
   }
   return (
-    <StyledTypist cursor={{ show: true }}>
+    <StyledTypist cursor={{ show: false }}>
       <strong key={1}>Vous cherchez,</strong>{" "}
       <Typist.Backspace count={0} delay={1000} />
       <span key={2}> du bois de chauffage de qualitée ?</span>

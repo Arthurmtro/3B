@@ -1,11 +1,12 @@
 import React from "react";
+
 import styled from "styled-components";
 import Pattern from "../assets/pattern.gif";
 
 const Base = styled.a`
   font-size: 20pt;
   font-family: "Pacifico", cursive;
-  color: #5acab1;
+  color: #f2edb7;
   width: 100%;
   margin: 7rem;
   white-space: nowrap;

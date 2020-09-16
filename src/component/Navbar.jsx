@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Flex, Box } from "@rebass/grid";
+import { Link } from "react-router-dom";
 
 import ButtonLink from "./ButtonLink";
 import Name from "./Name";
@@ -62,7 +63,7 @@ function NavBar(props) {
           <ul>
             <li>
               <MenuItem>
-                <a href="tarifs" style={{ color: "white" }}>
+                <a href="#tarifs" style={{ color: "white" }}>
                   Tarifs
                 </a>
               </MenuItem>
@@ -76,9 +77,16 @@ function NavBar(props) {
           <ul>
             <li>
               <MenuItem>
-                <a href="galerie" style={{ color: "white" }}>
+                <Link to="/galerie" style={{ color: "white" }}>
                   Galerie
-                </a>
+                </Link>
+              </MenuItem>
+            </li>
+            <li>
+              <MenuItem>
+                <Link to="/tp" style={{ color: "white" }}>
+                  tp
+                </Link>
               </MenuItem>
             </li>
           </ul>
