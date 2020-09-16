@@ -1,4 +1,5 @@
 import React from "react";
+import Helmet from "react-helmet";
 import styled, { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 import styledNormalize from "styled-normalize";
@@ -69,6 +70,13 @@ const FooterText = styled.div`
 const Layout = ({ children }) => (
   <Body>
     <GlobalStyle />
+    <Helmet title="Bigeard, Bois et Buches">
+      <html lang="fr" />
+      <meta
+        name="description"
+        content="Web site created using create-react-app"
+      />
+    </Helmet>
     <Navbar />
     {children}
     <Footer>
