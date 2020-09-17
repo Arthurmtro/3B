@@ -4,8 +4,9 @@ import media from "../utils/style";
 
 export const Section = styled.div`
   text-align: center;
-  padding-top: 30px;
-  padding-bottom: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 0;
   ${(props) =>
     props.dark &&
     css`

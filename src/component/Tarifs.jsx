@@ -1,0 +1,56 @@
+import React from "react";
+import styled, { css } from "styled-components";
+
+import media from "../utils/style";
+
+import { TARIFS_DATA } from "../data/tarifs.js";
+
+const TarifsSection = styled.div`
+  display: grid;
+  grid-template-columns: auto auto auto;
+  border: 1px solid #898989;
+  margin: 0 auto;
+  width: 75%;
+`;
+
+const TarifsContainer = styled.div`
+  display: block;
+  border: 1px solid #898989;
+  min-width: 25%;
+`;
+
+const Title = styled.p`
+  font-weight: 800;
+  font-size: larger;
+  margin: 0;
+  padding: 35px;
+  ${media.xs`
+  `}
+`;
+
+const Price = styled.p`
+  border-top: 1px solid #898989;
+  border-bottom: 1px solid #898989;
+  padding: 25px 0;
+  margin: 0;
+`;
+
+const Tarifs = () => {
+  return (
+    <>
+      <TarifsSection>
+        {TARIFS_DATA.map(({ title, details }) => (
+          <TarifsContainer>
+            <Title>{title}</Title>
+            {details.map((price) => (
+              <Price>{price}</Price>
+            ))}
+          </TarifsContainer>
+        ))}
+      </TarifsSection>
+      <p>Tarifs TTC sur place, hors frais de livraison</p>
+    </>
+  );
+};
+
+export default Tarifs;
