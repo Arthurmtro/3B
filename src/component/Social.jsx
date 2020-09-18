@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import { Envelope as MailIcon } from "@styled-icons/boxicons-solid/Envelope";
 import { Facebook as FacebookIcon } from "@styled-icons/entypo-social/Facebook";
-import ButtonLink from "./ButtonLink";
+import { SocialButton } from "./LinkButton";
 
 const IconWrapper = styled.div`
   position: absolute;
@@ -36,9 +36,9 @@ function Social(props) {
       >
         <FacebookIcon />
       </a>
-      <ButtonLink aria-label={mail.type}>
+      <SocialButton aria-label={mail.type}>
         <MailIcon />
-      </ButtonLink>
+      </SocialButton>
     </IconWrapper>
   );
 }

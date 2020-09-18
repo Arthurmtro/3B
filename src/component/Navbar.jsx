@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Flex, Box } from "@rebass/grid";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
-import ButtonLink from "./ButtonLink";
+import { SocialButton } from "./LinkButton";
 import Name from "./Name";
 import media from "../utils/style";
 
@@ -39,7 +39,7 @@ const NameBox = styled(Box)`
   `}
 `;
 
-const MenuItem = styled(ButtonLink)`
+const MenuItem = styled(SocialButton)`
   font-family: "Raleway";
   text-transform: uppercase;
   font-weight: 600;
@@ -73,6 +73,7 @@ function NavBar(props) {
         <NameBox pt={2}>
           <Name />
         </NameBox>
+        {/* 
         <MenuBox>
           <ul>
             <li>
@@ -88,9 +89,9 @@ function NavBar(props) {
                   tp
                 </Link>
               </MenuItem>
-            </li>
           </ul>
         </MenuBox>
+            </li>*/}
       </Flex>
     </Base>
   );

@@ -32,6 +32,7 @@ const GlobalStyle = createGlobalStyle`
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Raleway';
     text-transform: uppercase;
+    font-weight: bold;
     letter-spacing: 0.3em;
     color: #292929;
   }
@@ -61,9 +62,10 @@ const Footer = styled.footer`
   }
 `;
 
-const FooterText = styled.div`
+const FooterText = styled.a`
   font-size: 0.7em;
-  padding: 3em;
+  padding: 2em;
+  color: #c6844c;
 `;
 
 const Layout = ({ children }) => (
@@ -72,7 +74,14 @@ const Layout = ({ children }) => (
     <Navbar />
     {children}
     <Footer>
-      <FooterText>arthurmtro.com</FooterText>
+      <FooterText
+        href="https://github.com/arthurmtro"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        © {new Date().getFullYear()} - Sîte développé par{" "}
+        <strong> Arthur Monteiro </strong>, tout simplement
+      </FooterText>
     </Footer>
   </Body>
 );

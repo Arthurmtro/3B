@@ -13,6 +13,10 @@ const StyledTypist = styled(Typist)`
   font-weight: 100;
   text-transform: uppercase;
   font-family: "Raleway";
+  strong {
+    font-weight: 800;
+  }
+
   ${media.xs`
     font-size:28px;
     line-height: 44px;

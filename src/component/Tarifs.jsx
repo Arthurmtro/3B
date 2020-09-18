@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 import media from "../utils/style";
 
@@ -10,7 +10,10 @@ const TarifsSection = styled.div`
   grid-template-columns: auto auto auto;
   border: 1px solid #898989;
   margin: 0 auto;
-  width: 75%;
+  width: 70%;
+  ${media.xs`
+    width: 92%;
+  `}
 `;
 
 const TarifsContainer = styled.div`
@@ -20,11 +23,13 @@ const TarifsContainer = styled.div`
 `;
 
 const Title = styled.p`
-  font-weight: 800;
+  font-weight: bolder;
   font-size: larger;
   margin: 0;
   padding: 35px;
   ${media.xs`
+    font-size: smaller;
+    padding: 20px 0px;
   `}
 `;
 
@@ -33,6 +38,10 @@ const Price = styled.p`
   border-bottom: 1px solid #898989;
   padding: 25px 0;
   margin: 0;
+  ${media.xs`
+    font-size: smaller;
+    padding: 15px;
+  `}
 `;
 
 const Tarifs = () => {
@@ -40,7 +49,7 @@ const Tarifs = () => {
     <>
       <TarifsSection>
         {TARIFS_DATA.map(({ title, details }) => (
-          <TarifsContainer>
+          <TarifsContainer key={title}>
             <Title>{title}</Title>
             {details.map((price) => (
               <Price>{price}</Price>
@@ -48,7 +57,9 @@ const Tarifs = () => {
           </TarifsContainer>
         ))}
       </TarifsSection>
-      <p>Tarifs TTC sur place, hors frais de livraison</p>
+      <p style={{ fontSize: "smaller", marginTop: "10px" }}>
+        *Tarifs TTC sur place, hors frais de livraison
+      </p>
     </>
   );
 };
