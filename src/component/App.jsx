@@ -4,7 +4,7 @@ import { Switch, Route } from "react-router-dom";
 
 import { allSocialJson } from "../data/social";
 
-import { Section, SectionTitle } from "./Section";
+import { Section, SectionTitle, ContactOptions } from "./Section";
 import Hero from "./Hero";
 import HeroText from "./HeroText";
 import Social from "./Social";
@@ -30,6 +30,11 @@ function App() {
           </Hero>
           <Section dark>
             <SectionTitle>Nos services</SectionTitle>
+            <ContactOptions>
+              <h3 className="info">06 79 12 91 48</h3>
+              <h3>ou</h3>
+              <h3 className="info">06 75 79 52 86</h3>
+            </ContactOptions>
             <p>
               Coupe Transforme et vends <br /> bois de chauffage. Bois bûches
               coupée de 2 ans. <br /> <br />

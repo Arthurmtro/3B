@@ -37,6 +37,9 @@ const GlobalStyle = createGlobalStyle`
     color: #292929;
   }
 
+  .info {
+  }
+
 `;
 
 const Body = styled.div`
