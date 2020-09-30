@@ -1,11 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import Carousel from "styled-components-carousel";
 
 import media from "../utils/style";
 
 import { GALERIE_DATA } from "../data/galerie";
 //import LinkButton from "./LinkButton";
 
+/*
 const GalerieSection = styled.div`
   width: 85%;
   margin: 18px auto;
@@ -19,6 +21,7 @@ const GalerieSection = styled.div`
     margin-bottom: -5px;
   `}
 `;
+*/
 
 const ImageContainer = styled.div`
   margin: auto;
@@ -38,7 +41,6 @@ const Image = styled.img`
     transform: scale(1.4);
   }
   ${media.xs`
-    width: 190%;
   `}
 `;
 
@@ -46,7 +48,7 @@ const Galerie = ({ maxImages }) => {
   return (
     <>
       <h2>Galerie</h2>
-      <GalerieSection>
+      <Carousel center infinite showArrows showIndicator slidesToShow={3}>
         {GALERIE_DATA.filter((el) => el.id < maxImages).map(
           ({ title, url }) => (
             <ImageContainer>
@@ -54,7 +56,7 @@ const Galerie = ({ maxImages }) => {
             </ImageContainer>
           )
         )}
-      </GalerieSection>
+      </Carousel>
       {/*
       <LinkButton urlLink={"galerie"}>Voir plus</LinkButton>
         </Route> */}
