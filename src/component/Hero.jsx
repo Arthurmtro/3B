@@ -1,6 +1,7 @@
 import React from "react";
 
 import styled from "styled-components";
+import ImageForest from "../assets/wood.jpg";
 
 const Container = styled.div`
   display: flex;
@@ -28,7 +29,7 @@ const BgImage = styled.div`
   width: 100vw;
   height: 100vh; // or whatever
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
-    url(${(props) => props.Image});
+    url(${ImageForest});
 
   background-position: center;
   background-repeat: no-repeat;

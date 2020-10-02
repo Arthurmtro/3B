@@ -25,16 +25,13 @@ const StyledTypist = styled(Typist)`
 `;
 
 const HeroText = (props) => {
-  const { homePage } = props;
-  if (!homePage) {
+  const { text } = props;
+  if (text) {
     return (
       <StyledTypist cursor={{ show: false }}>
-        <strong key={1}>Bigeard c'est aussi,</strong>{" "}
-        <Typist.Backspace count={0} delay={1000} />
-        <span key={2}> des services de travaux publics</span>
-        <Typist.Backspace count={60} delay={2000} />
-        <strong key={8}> Ne cherchez plus,</strong>
-        <Typist.Delay ms={1500} /> Nous somme la
+        <strong>{text.split(" ").slice(0, 1)}</strong>
+        <br />
+        {text.split(" ").slice(1).join(" ")}
       </StyledTypist>
     );
   }

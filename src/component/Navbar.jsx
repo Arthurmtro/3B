@@ -62,10 +62,8 @@ function NavBar(props) {
         <MenuBox>
           <ul>
             <li>
-              <MenuItem>
-                <a href="#tarifs" style={{ color: "white" }}>
-                  Tarifs
-                </a>
+              <MenuItem href="#tarifs" style={{ color: "white" }}>
+                Tarifs
               </MenuItem>
             </li>
           </ul>

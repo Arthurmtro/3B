@@ -13,7 +13,6 @@ const Base = styled.a`
   transition-property: transform;
   transition-duration: 0.8s;
   &:hover {
-    cursor: pointer;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-image: url(${Pattern});

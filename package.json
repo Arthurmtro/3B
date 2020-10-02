@@ -1,6 +1,6 @@
 {
-  "name": "3b",
-  "version": "1.1.0",
+  "name": "3b.v2",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@rebass/grid": "^6.1.0",
@@ -10,7 +10,7 @@
     "lodash": "^4.17.20",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-helmet": "^6.1.0",
+    "react-helmet-async": "^1.0.7",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "react-scroll": "^1.8.1",
