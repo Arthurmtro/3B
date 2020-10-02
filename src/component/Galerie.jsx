@@ -72,7 +72,6 @@ class Galerie extends React.Component {
     }
 
     return (
-      //<div>Current window width: {windowWidth}</div>;<h2>Galerie</h2>
       <>
         <Carousel
           center
