@@ -5,6 +5,7 @@ export const allSocialJson = [
   },
   {
     type: "mail",
-    url: "#contact",
+    url: "mailto:bigeard.julien@hotmail.fr?subject = Devis&body = Message",
+    email: "bigeard.julien@hotmail.fr",
   },
 ];

@@ -36,7 +36,12 @@ function Social(props) {
       >
         <FacebookIcon />
       </a>
-      <SocialButton aria-label={mail.type}>
+      <SocialButton
+        aria-label={mail.type}
+        target="_blank"
+        rel="noopener noreferrer"
+        href={mail.url}
+      >
         <MailIcon />
       </SocialButton>
     </IconWrapper>

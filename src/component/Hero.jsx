@@ -1,6 +1,5 @@
 import React from "react";
 
-import Image from "../assets/wood.jpg";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -29,7 +28,7 @@ const BgImage = styled.div`
   width: 100vw;
   height: 100vh; // or whatever
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
-    url(${Image});
+    url(${(props) => props.Image});
 
   background-position: center;
   background-repeat: no-repeat;
@@ -42,10 +41,10 @@ const BgImage = styled.div`
 `;
 
 const Hero = (props) => {
-  const { children, fluid } = props;
+  const { children, fluid, Image } = props;
   return (
     <Container>
-      <BgImage fluid={fluid} />
+      <BgImage fluid={fluid} Image={Image} />
       <Overlay>{children}</Overlay>
     </Container>
   );

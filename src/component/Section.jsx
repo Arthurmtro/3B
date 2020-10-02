@@ -3,10 +3,22 @@ import styled, { css } from "styled-components";
 import media from "../utils/style";
 
 export const Section = styled.div`
+  background: #353535;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
   margin-bottom: 0;
+
+  h2 {
+    color: #fff;
+  }
+  h3 {
+    color: #fff;
+  }
+  div {
+    color: #979797;
+  }
+  p {
+    color: #929292;
+  }
   ${(props) =>
     props.dark &&
     css`
@@ -34,9 +46,9 @@ export const SectionTitle = styled.h2`
   `}
 `;
 
-export const ContactOptions = styled.h2`
+export const ContactOptions = styled.div`
   width: 70%;
-  margin: 0.65em auto;
+  margin: 2em auto;
   font-family: "Open Sans";
   border: 1px solid #ffffff54;
   .info {

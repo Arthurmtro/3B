@@ -48,11 +48,11 @@ const Tarifs = () => {
   return (
     <>
       <TarifsSection>
-        {TARIFS_DATA.map(({ title, details }) => (
-          <TarifsContainer key={title}>
+        {TARIFS_DATA.map(({ id, title, details }) => (
+          <TarifsContainer key={id}>
             <Title>{title}</Title>
             {details.map((price) => (
-              <Price>{price}</Price>
+              <Price key={price}>{price}</Price>
             ))}
           </TarifsContainer>
         ))}

@@ -44,24 +44,57 @@ const Image = styled.img`
   `}
 `;
 
-const Galerie = ({ maxImages }) => {
-  return (
-    <>
-      <h2>Galerie</h2>
-      <Carousel center infinite showArrows showIndicator slidesToShow={3}>
-        {GALERIE_DATA.filter((el) => el.id < maxImages).map(
-          ({ title, url }) => (
-            <ImageContainer>
-              <Image src={url} alt="bug" />
-            </ImageContainer>
-          )
-        )}
-      </Carousel>
-      {/*
-      <LinkButton urlLink={"galerie"}>Voir plus</LinkButton>
-        </Route> */}
-    </>
-  );
-};
+class Galerie extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { windowWidth: window.innerWidth };
+  }
+
+  handleResize = (e) => {
+    this.setState({ windowWidth: window.innerWidth });
+  };
+
+  componentDidMount() {
+    window.addEventListener("resize", this.handleResize);
+  }
+
+  componentWillUnmount() {
+    window.addEventListener("resize", this.handleResize);
+  }
+
+  render() {
+    const { windowWidth } = this.state;
+    let carouselSlidesToShow;
+    if (windowWidth > 991) {
+      carouselSlidesToShow = 3;
+    } else {
+      carouselSlidesToShow = 2;
+    }
+
+    return (
+      //<div>Current window width: {windowWidth}</div>;<h2>Galerie</h2>
+      <>
+        <Carousel
+          center
+          infinite
+          showArrows
+          showIndicator
+          slidesToShow={carouselSlidesToShow}
+        >
+          {GALERIE_DATA.filter((el) => el.id < this.props.maxImages).map(
+            ({ id, title, url }) => (
+              <ImageContainer key={id}>
+                <Image src={url} alt="bug" />
+              </ImageContainer>
+            )
+          )}
+        </Carousel>
+        {/*
+        <LinkButton urlLink={"galerie"}>Voir plus</LinkButton>
+          </Route> */}
+      </>
+    );
+  }
+}
 
 export default Galerie;

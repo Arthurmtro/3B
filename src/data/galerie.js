@@ -23,34 +23,4 @@ export const GALERIE_DATA = [
     description: "",
     url: "./galerie/img (3).jpg",
   },
-  {
-    id: 4,
-    categorie: "",
-    description: "",
-    url: "./galerie/img (5).jpg",
-  },
-  {
-    id: 5,
-    categorie: "",
-    description: "",
-    url: "./galerie/img (6).jpg",
-  },
-  {
-    id: 6,
-    categorie: "",
-    description: "",
-    url: "./galerie/img (7).jpg",
-  },
-  {
-    id: 7,
-    categorie: "",
-    description: "",
-    url: "./galerie/img (8).jpg",
-  },
-  {
-    id: 8,
-    categorie: "",
-    description: "",
-    url: "./galerie/img (9).jpg",
-  },
 ];

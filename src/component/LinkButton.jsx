@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
-export const SocialButton = styled.button`
+export const SocialButton = styled.a`
   background: none !important;
   color: inherit;
   border: none;
@@ -25,7 +24,8 @@ export const ButtonStyle = styled.button`
   height: 55px;
   text-align: center;
   border: none;
-  margin: 20px auto;
+  margin: 20px 15px;
+  margin-top: -55px;
 
   background-size: 300% 100%;
   border-radius: 50px;
@@ -54,10 +54,31 @@ export const ButtonStyle = styled.button`
   }
 `;
 
-const LinkButton = ({ children, urlLink }) => (
-  <Link to={`/${urlLink}`}>
-    <ButtonStyle>{children}</ButtonStyle>
-  </Link>
-);
+const LinkButton = ({ children, edges, call }) => {
+  if (call) {
+    return (
+      <a
+        aria-label="call number"
+        target="_blank"
+        rel="noopener noreferrer"
+        href={`tel:${call}`}
+      >
+        <ButtonStyle>{children}</ButtonStyle>
+      </a>
+    );
+  } else {
+    const mail = edges.find((o) => o.type === "mail");
+    return (
+      <a
+        aria-label={mail.type}
+        target="_blank"
+        rel="noopener noreferrer"
+        href={mail.url}
+      >
+        <ButtonStyle>{children}</ButtonStyle>
+      </a>
+    );
+  }
+};
 
 export default LinkButton;
