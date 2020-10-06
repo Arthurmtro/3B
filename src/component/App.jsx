@@ -47,6 +47,10 @@ function App() {
                 Devis gratuit.
               </p>
             </Section>
+            <Section dark id="tarifs">
+              <SectionTitle>Tarifs</SectionTitle>
+              <Tarifs />
+            </Section>
             <Section>
               <SectionTitle>Bigeard TP</SectionTitle>
               <p>
@@ -57,10 +61,6 @@ function App() {
                 tractopelle/tracteur remorque avec chauffeur
               </p>
               <Galerie maxImages={5} />
-            </Section>
-            <Section dark id="tarifs">
-              <SectionTitle>Tarifs</SectionTitle>
-              <Tarifs />
             </Section>
           </Route>
         </Switch>

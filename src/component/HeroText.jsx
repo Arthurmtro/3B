@@ -37,10 +37,10 @@ const HeroText = (props) => {
   }
   return (
     <StyledTypist cursor={{ show: false }}>
-      <strong key={1}>Vous cherchez,</strong>{" "}
-      <Typist.Backspace count={0} delay={1000} />
+      <strong key={1}>Vous cherchez,</strong>
+      <Typist.Backspace count={0} delay={1} />
       <span key={2}> du bois de chauffage de qualitée ?</span>
-      <Typist.Backspace count={35} delay={2000} />
+      <Typist.Backspace count={35} delay={15} />
       <span key={3}> des professionels rapides et efficaces ?</span>
       <Typist.Backspace count={40} delay={2000} />
       <span key={4}> dans les environs des mauges ?</span>
