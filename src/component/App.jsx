@@ -23,7 +23,10 @@ function App() {
               <html lang="fr" />
               <meta
                 name="description"
-                content="Web site created using create-react-app"
+                content="bigeard bois et buches, Coupe Transforme et vend
+                  bois de chauffage. Bois bûches coupée de 2 ans.
+                  Chargement sur place (Orée d'Anjou 49530)
+                  ou possibilité de livraison"
               />
             </Helmet>
             <Hero>
