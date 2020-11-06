@@ -28,7 +28,7 @@ const Overlay = styled.div`
 const BgImage = styled.div`
   width: 100vw;
   height: 100vh; // or whatever
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0,0,0,0.3)),
     url(${ImageForest});
 
   background-position: center;

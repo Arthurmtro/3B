@@ -39,9 +39,9 @@ const HeroText = (props) => {
     <StyledTypist cursor={{ show: false }}>
       <strong key={1}>Vous cherchez,</strong>
       <Typist.Backspace count={0} delay={1} />
-      <span key={2}> du bois de chauffage de qualitée ?</span>
+      <span key={2}> du bois de chauffage de qualité ?</span>
       <Typist.Backspace count={35} delay={15} />
-      <span key={3}> des professionels rapides et efficaces ?</span>
+      <span key={3}> des professionnels rapides et efficaces ?</span>
       <Typist.Backspace count={40} delay={2000} />
       <span key={4}> dans les environs des mauges ?</span>
       <Typist.Delay ms={300} />
@@ -53,7 +53,7 @@ const HeroText = (props) => {
       <Typist.Delay ms={200} />
       <Typist.Backspace count={60} delay={500} />
       <strong key={8}> Ne cherchez plus,</strong>
-      <Typist.Delay ms={1500} /> Nous somme la
+      <Typist.Delay ms={1500} /> Nous sommes là
     </StyledTypist>
   );
 };

@@ -44,7 +44,7 @@ function App() {
               <SectionTitle>Nos services</SectionTitle>
               <p>
                 Coupe Transforme et vend <br /> bois de chauffage. Bois bûches
-                coupée de 2 ans. <br /> <br />
+                coupées de 2 ans. <br /> <br />
                 Chargement sur place (Orée d'Anjou) <br />
                 ou possibilité de livraison <br />
                 Devis gratuit.
